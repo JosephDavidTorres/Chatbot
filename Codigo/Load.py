@@ -1,6 +1,4 @@
-import os
-import sys
-from dotenv import load_dotenv, find_dotenv
+from dotenv import load_dotenv
 
 from openai import OpenAI
 import os
@@ -24,7 +22,7 @@ completion = client.chat.completions.create(
   ]
 )
 
-print(completion.choices[0].message);
+print(completion.choices[0].message)
 
 # pip install PyPDF2
 from langchain_community.document_loaders import PyPDFLoader
@@ -100,7 +98,7 @@ splits = r_splitter.split_documents(pages)  # Aplicar la división a los documen
 # pip install -U langchain-openai langchain-community
 # Embedding de nuestro documento para crear representaciones vectoriales
 from langchain_openai import OpenAIEmbeddings
-embedding = OpenAIEmbeddings(openai_api_key="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")
+embedding = OpenAIEmbeddings(openai_api_key="OPENAI_API_KEY")
 
 # Vectorizamos el documento
 # En caso de haber ejecutado antes, borramos lo que había en la base de datos (para evitar datos duplicados)
