@@ -146,7 +146,7 @@ compression_retriever = ContextualCompressionRetriever(
 )
 
 # Hacer una consulta sobre los documentos
-pregunta = "donde estan las aulas de clase y en que numero de bloque"
+pregunta = "cuando son los examenes finales"
 compressed_docs = compression_retriever.invoke(pregunta)  # Obtenemos los documentos relevantes
 pretty_print_docs(compressed_docs)  # Mostramos los documentos encontrados
 

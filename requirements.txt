@@ -1,0 +1,7 @@
+python-dotenv>=1.0.0
+openai>=0.27.0
+langchain>=0.0.198
+langchain-openai>=0.0.17
+langchain-community>=0.0.15
+chromadb>=0.3.24
+PyPDF2>=3.0.0
