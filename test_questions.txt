@@ -1,0 +1,27 @@
+# type:respuesta_directa
+¿Cuáles son los horarios de atención de secretaría?
+¿Dónde se encuentra la biblioteca universitaria?
+¿Cuándo son los exámenes finales?
+¿A qué hora abre el comedor universitario?
+¿Cuáles son las asignaturas del segundo cuatrimestre?
+
+# type:ambigua
+¿Qué pasa al final?
+¿Dónde se hace?
+¿Cuál es el procedimiento?
+¿Qué significa eso?
+¿Es obligatorio?
+
+# type:fuera_de_contexto
+¿Quién ganó Eurovisión en 2023?
+¿Cuántos habitantes tiene Canadá?
+¿Cuál es el precio del bitcoin hoy?
+¿Quién escribió "Cien años de soledad"?
+¿Cómo se cocina una paella?
+
+# type:respuesta_directa
+¿Dónde está el aula magna?
+¿Cuándo empiezan las clases del primer semestre?
+¿Cómo se solicita una beca?
+¿Se puede aparcar en el campus?
+¿Qué documentos se necesitan para la matrícula?

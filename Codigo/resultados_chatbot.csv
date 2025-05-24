@@ -1,0 +1,25 @@
+tipo,pregunta,respuesta
+respuesta_directa,¿Cuáles son los horarios de atención de secretaría?,Lunes a Viernes: de 9 a 14.
+respuesta_directa,¿Dónde se encuentra la biblioteca universitaria?,No tengo información suficiente en los documentos proporcionados.
+respuesta_directa,¿Cuándo son los exámenes finales?,No tengo información suficiente en los documentos proporcionados.
+respuesta_directa,¿A qué hora abre el comedor universitario?,No tengo información suficiente en los documentos proporcionados.
+respuesta_directa,¿Cuáles son las asignaturas del segundo cuatrimestre?,No tengo información suficiente en los documentos proporcionados.
+ambigua,¿Qué pasa al final?,"Al final, se pierde todo derecho a seguir cursando los estudios iniciados, presentarse a exámenes o evaluaciones, realizar prácticas y obtener calificaciones. Además, se pierde la plaza adjudicada."
+ambigua,¿Dónde se hace?,No tengo información suficiente en los documentos proporcionados.
+ambigua,¿Cuál es el procedimiento?,El procedimiento consiste en rellenar un formulario en evalua.daupm.es/evalua para expresar reclamaciones o felicitaciones a los profesores de forma confidencial. La Delegación de Alumnos se encarga del resto y se puede consultar el estado de tramitación en la web o contactando con ellos.
+ambigua,¿Qué significa eso?,No tengo información suficiente en los documentos proporcionados.
+ambigua,¿Es obligatorio?,"Sí, es obligatorio."
+fuera_de_contexto,¿Quién ganó Eurovisión en 2023?,No tengo información suficiente en los documentos proporcionados.
+fuera_de_contexto,¿Cuántos habitantes tiene Canadá?,No tengo información suficiente en los documentos proporcionados.
+fuera_de_contexto,¿Cuál es el precio del bitcoin hoy?,No tengo información suficiente en los documentos proporcionados.
+fuera_de_contexto,"¿Quién escribió ""Cien años de soledad""?",Gabriel García Márquez.
+fuera_de_contexto,¿Cómo se cocina una paella?,No tengo información suficiente en los documentos proporcionados.
+respuesta_directa,¿Dónde está el aula magna?,No tengo información suficiente en los documentos proporcionados.
+respuesta_directa,¿Cuándo empiezan las clases del primer semestre?,Las clases del primer semestre comienzan el lunes 6 de septiembre.
+respuesta_directa,¿Cómo se solicita una beca?,No tengo información suficiente en los documentos proporcionados.
+respuesta_directa,¿Se puede aparcar en el campus?,No tengo información suficiente en los documentos proporcionados.
+respuesta_directa,¿Qué documentos se necesitan para la matrícula?,"Se necesitan los siguientes documentos para la matrícula:  
+1. Certificación académica oficial de los estudios realizados, con calificaciones y nota media aprobatoria.  
+2. Programa de las asignaturas aprobadas, sellado y diligenciado por el centro, detallando contenido y carga lectiva.  
+3. Pasaporte, DNI/NIE (o certificación de los Servicios Consulares para estudiantes extranjeros).  
+4. Resguardo de haber solicitado plaza."
