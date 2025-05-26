@@ -103,8 +103,8 @@ def responder(pregunta):
 # Interfaz Gradio
 gr.Interface(
     fn=responder,
-    inputs=gr.Textbox(lines=3, placeholder="Haz una pregunta sobre los documentos..."),
+    inputs=gr.Textbox(lines=3, placeholder="Pregunta algo relacionado con la uni..."),
     outputs="text",
-    title="Chatbot RAG con GPT-4o-mini",
-    description="Haz preguntas basadas en los documentos PDF/TXT de la carpeta ./Datos."
+    title="Bienvenido al Chatbot de la UPM - ETSISI",
+    description=""
 ).launch()

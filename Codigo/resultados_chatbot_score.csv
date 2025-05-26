@@ -1,25 +1,28 @@
 tipo,pregunta,respuesta
-respuesta_directa,¿Cuáles son los horarios de atención de secretaría?,Lunes a viernes: de 9 a 14.
-respuesta_directa,¿Dónde se encuentra la biblioteca universitaria?,La biblioteca universitaria se encuentra en el Campus Sur.
+respuesta_directa,¿Cuáles son los horarios de atención de secretaría?,Lunes a Viernes: de 9 a 14.
+respuesta_directa,¿Dónde se encuentra la biblioteca universitaria?,No tengo información suficiente en los documentos proporcionados.
 respuesta_directa,¿Cuándo son los exámenes finales?,No tengo información suficiente en los documentos proporcionados.
 respuesta_directa,¿A qué hora abre el comedor universitario?,No tengo información suficiente en los documentos proporcionados.
 respuesta_directa,¿Cuáles son las asignaturas del segundo cuatrimestre?,No tengo información suficiente en los documentos proporcionados.
 ambigua,¿Qué pasa al final?,No tengo información suficiente en los documentos proporcionados.
 ambigua,¿Dónde se hace?,No tengo información suficiente en los documentos proporcionados.
-
+ambigua,¿Cuál es el procedimiento?,"El procedimiento EVALÚA consiste en una herramienta oficial de la Delegación de Alumnos de la UPM, donde los estudiantes pueden expresar reclamaciones y/o felicitaciones a sus profesores de forma confidencial. Para utilizarlo, los estudiantes deben rellenar un formulario en la página evalua.daupm.es/evalua. La Delegación de Alumnos se encarga del resto y los estudiantes pueden consultar el estado de tramitación de su parte en la web o contactando con ellos."
 ambigua,¿Qué significa eso?,No tengo información suficiente en los documentos proporcionados.
 ambigua,¿Es obligatorio?,"Sí, es obligatorio."
 fuera_de_contexto,¿Quién ganó Eurovisión en 2023?,No tengo información suficiente en los documentos proporcionados.
 fuera_de_contexto,¿Cuántos habitantes tiene Canadá?,No tengo información suficiente en los documentos proporcionados.
 fuera_de_contexto,¿Cuál es el precio del bitcoin hoy?,No tengo información suficiente en los documentos proporcionados.
 fuera_de_contexto,"¿Quién escribió ""Cien años de soledad""?",No tengo información suficiente en los documentos proporcionados.
-fuera_de_contexto,¿Cómo se cocina una paella?,No tengo información suficiente en los documentos proporcionados.
+fuera_de_contexto,¿Dónde está la universidad?,No tengo información suficiente en los documentos proporcionados.
 respuesta_directa,¿Dónde está el aula magna?,No tengo información suficiente en los documentos proporcionados.
-respuesta_directa,¿Cuándo empiezan las clases del primer semestre?,Las clases del primer semestre comienzan el 3 de septiembre.
-respuesta_directa,¿Cómo se solicita una beca?,"Para solicitar una beca, se debe enviar una solicitud por correo electrónico a las Secretarías de los Centros correspondientes entre el 10 de febrero y el 10 de marzo de 2025, adjuntando la documentación requerida, que incluye la certificación académica oficial, el programa de asignaturas aprobadas, el pasaporte o DNI/NIE, y el resguardo de haber solicitado plaza."
+respuesta_directa,¿Cuándo empiezan las clases del primer semestre?,No tengo información suficiente en los documentos proporcionados.
+respuesta_directa,¿Cómo se solicita una beca?,No tengo información suficiente en los documentos proporcionados.
 respuesta_directa,¿Se puede aparcar en el campus?,No tengo información suficiente en los documentos proporcionados.
-respuesta_directa,¿Qué documentos se necesitan para la matrícula?,"Se necesitan los siguientes documentos para la matrícula:  
-1. Certificación académica oficial de los estudios realizados, con calificaciones y nota media aprobatoria.  
-2. Programa de las asignaturas aprobadas, sellado y diligenciado por el centro, con contenido y carga lectiva.  
-3. Pasaporte, DNI/NIE (o certificación de los Servicios Consulares para estudiantes extranjeros).  
-4. Resguardo de haber solicitado plaza."
+respuesta_directa,¿Qué documentos se necesitan para la matrícula?,"Se necesitan los siguientes documentos para la matrícula:
+
+1. Certificación académica oficial de los estudios realizados, con calificaciones y nota media aprobatoria.
+2. Programa de las asignaturas aprobadas, sellado y diligenciado por el centro, detallando los cursos académicos.
+3. Pasaporte, DNI/NIE (o certificación de los Servicios Consulares para estudiantes extranjeros).
+4. Resguardo de haber solicitado plaza.
+5. Documentación que acredite las exenciones de pago aplicadas en la matrícula (si corresponde).
+6. Orden de domiciliación bancaria (SEPA) para quienes domicilien por primera vez o cambien datos bancarios."

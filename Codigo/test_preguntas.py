@@ -65,23 +65,30 @@ compressor = LLMChainExtractor.from_llm(llm)
 retriever = ContextualCompressionRetriever(
     base_compressor=compressor,
     base_retriever=vectordb.as_retriever(
-        search_type="similarity_score_threshold",
-        search_kwargs={"score_threshold": 0.7}  # Puedes ajustar el valor (de 0 a 1)
+        search_type="mmr",
     )
 )
+
 
 # Prompt personalizado
 prompt = PromptTemplate(
     input_variables=["context", "question"],
-    template="""Usando únicamente el siguiente contexto, responde la pregunta de forma concisa.
-Si la respuesta no se encuentra en el contexto, responde: "No tengo información suficiente en los documentos proporcionados."
+    template="""
+    Responde a la siguiente pregunta exclusivamente usando el contexto proporcionado.
+    Si el contexto no contiene información clara y directa para responder, debes decir:
+    "No tengo información suficiente en los documentos proporcionados."
 
-Contexto: {context}
+    Sé preciso. No asumas ni inventes nada que no esté explícitamente presente.
 
-Pregunta: {question}
+    Contexto:
+    {context}
 
-Respuesta:
-"""
+    Pregunta:
+    {question}
+
+    Respuesta:
+    """
+
 )
 
 qa_chain = RetrievalQA.from_chain_type(

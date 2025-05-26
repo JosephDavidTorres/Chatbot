@@ -17,7 +17,7 @@
 ¿Cuántos habitantes tiene Canadá?
 ¿Cuál es el precio del bitcoin hoy?
 ¿Quién escribió "Cien años de soledad"?
-¿Cómo se cocina una paella?
+¿Dónde está la universidad?
 
 # type:respuesta_directa
 ¿Dónde está el aula magna?
