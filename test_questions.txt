@@ -1,27 +1,20 @@
 # type:respuesta_directa
+¿Dónde está la biblioteca?
+¿Y cuales son sus horarios?
 ¿Cuáles son los horarios de atención de secretaría?
-¿Dónde se encuentra la biblioteca universitaria?
-¿Cuándo son los exámenes finales?
-¿A qué hora abre el comedor universitario?
-¿Cuáles son las asignaturas del segundo cuatrimestre?
+¿Dónde se hace la matrícula?
+¿Se puede aparcar en el campus?
 
 # type:ambigua
-¿Qué pasa al final?
-¿Dónde se hace?
-¿Cuál es el procedimiento?
-¿Qué significa eso?
+¿Dónde?
 ¿Es obligatorio?
+¿Qué debo llevar?
 
 # type:fuera_de_contexto
-¿Quién ganó Eurovisión en 2023?
-¿Cuántos habitantes tiene Canadá?
-¿Cuál es el precio del bitcoin hoy?
-¿Quién escribió "Cien años de soledad"?
-¿Dónde está la universidad?
+¿Quién ganó el Mundial en 2018?
+¿Cuántos habitantes tiene Australia?
 
-# type:respuesta_directa
-¿Dónde está el aula magna?
-¿Cuándo empiezan las clases del primer semestre?
+# type:memoria
 ¿Cómo se solicita una beca?
-¿Se puede aparcar en el campus?
-¿Qué documentos se necesitan para la matrícula?
+¿Y los plazos?
+¿Y es obligatoria?
