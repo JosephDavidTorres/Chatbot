@@ -1,16 +1,7 @@
 tipo,pregunta,respuesta,fuente
-respuesta_directa,¿Dónde está la biblioteca?,"La biblioteca está situada en el Campus Sur, en el mismo pasillo que el Salón de Actos (el intercomunicador del Bloque VII).",C:/Users/David/Desktop/Chatbot/Datos\Guia estudiante\guia-estudiante.pdf
-respuesta_directa,¿Y cuales son sus horarios?,"Los horarios de la Biblioteca Universitaria del Campus Sur son los siguientes:
-
-Horario estándar durante el curso:
-- Lunes a Viernes: de 9 a 21
-- Sábado y Domingo: Cerrada
-
-Horario extraordinario (los días específicos se definen cada año):
-- De 10 a 14 y de 16 a 20
-
-La biblioteca permanecerá cerrada en festivos. Es imprescindible llevar el carnet UPM para acceder.",C:/Users/David/Desktop/Chatbot/Datos\Guia estudiante\guia-estudiante.pdf
-respuesta_directa,¿Cuáles son los horarios de atención de secretaría?,No tengo información suficiente en los documentos proporcionados.,C:/Users/David/Desktop/Chatbot/Datos\Guia estudiante\guia-estudiante.pdf
+respuesta_directa,¿Dónde está la biblioteca?,La biblioteca está situada en el Campus Sur de la UPM.,C:/Users/David/Desktop/Chatbot/Datos\Guia estudiante\guia-estudiante.pdf
+respuesta_directa,¿Y cuales son sus horarios?,"El horario estándar de la Biblioteca Universitaria del Campus Sur es de lunes a viernes, de 9:00 a 21:00, y está cerrada los sábados y domingos. En épocas de exámenes, algunas bibliotecas abren también en fines de semana, de 9:00 a 22:00. Además, hay un horario extraordinario que varía cada año, de 10:00 a 14:00 y de 16:00 a 20:00, y es imprescindible llevar el carnet UPM para acceder. La biblioteca también permanecerá cerrada en festivos.",C:/Users/David/Desktop/Chatbot/Datos\Guia estudiante\guia-estudiante.pdf
+respuesta_directa,¿Cuáles son los horarios de atención de secretaría?,No tengo información suficiente en los documentos proporcionados.,-
 respuesta_directa,¿Dónde se hace la matrícula?,La matrícula se realiza a través de la página web de automatrícula.,C:/Users/David/Desktop/Chatbot/Datos\Guia estudiante\guia-estudiante.pdf
 respuesta_directa,¿Se puede aparcar en el campus?,No tengo información suficiente en los documentos proporcionados.,-
 ambigua,¿Dónde?,"Por favor, especifica mejor tu pregunta.",-
@@ -18,13 +9,16 @@ ambigua,¿Es obligatorio?,"Por favor, especifica mejor tu pregunta.",-
 ambigua,¿Qué debo llevar?,"Por favor, especifica mejor tu pregunta.",-
 fuera_de_contexto,¿Quién ganó el Mundial en 2018?,No tengo información suficiente en los documentos proporcionados.,-
 fuera_de_contexto,¿Cuántos habitantes tiene Australia?,No tengo información suficiente en los documentos proporcionados.,-
-memoria,¿Cómo se solicita una beca?,"Para solicitar una beca de carácter general del Ministerio de Educación y Formación Profesional, se debe enviar una solicitud por correo electrónico a las Secretarías de los Centros correspondientes entre el 10 de febrero y el 10 de marzo de 2025. La solicitud debe incluir la siguiente documentación:
+memoria,¿Cómo se solicita una beca?,"Para solicitar una beca de carácter general del Ministerio de Educación y Formación Profesional, se deben seguir los siguientes pasos:
 
-1. Certificación académica oficial de los estudios realizados, con las calificaciones obtenidas y la nota media aprobatoria.
-2. Programa de las asignaturas aprobadas, sellado y diligenciado por el centro donde se impartieron, detallando los cursos académicos vigentes.
-3. Pasaporte, DNI/NIE, o una certificación de los Servicios Consulares para estudiantes extranjeros.
-4. Resguardo de haber solicitado plaza.
+1. Enviar la solicitud por correo electrónico a las Secretarías de los Centros correspondientes entre el 10 de febrero y el 10 de marzo de 2025.
+2. Adjuntar la documentación requerida, que incluye:
+   - Certificación académica oficial con las calificaciones y nota media.
+   - Programa de las asignaturas aprobadas, sellado y diligenciado por el centro.
+   - Pasaporte, DNI/NIE o certificación consular para estudiantes extranjeros.
+   - Resguardo de haber solicitado plaza.
+3. Una vez enviada la solicitud, el centro enviará una carta de pago por el estudio de la solicitud, que debe ser abonada y el resguardo del abono debe ser remitido al centro a la mayor brevedad. 
 
-Una vez enviada la solicitud y la documentación, el centro enviará una carta de pago que debe ser abonada, y el resguardo del abono debe ser remitido al centro a la mayor brevedad.",C:/Users/David/Desktop/Chatbot/Datos\Matricula\2022_23_Precios Publicos_MU.pdf
-memoria,¿Y los plazos?,Las solicitudes se enviarán por correo electrónico a las Secretarías de los Centros correspondientes entre el 10 de febrero y el 10 de marzo de 2025.,C:/Users/David/Desktop/Chatbot/Datos\Reconocimiento\SFS24031.pdf
-memoria,¿Y es obligatoria?,No tengo información suficiente en los documentos proporcionados.,-
+Además, los documentos deben ser oficiales y legalizados según los requisitos establecidos.",C:/Users/David/Desktop/Chatbot/Datos\Matricula\2022_23_Precios Publicos_MU.pdf
+memoria,¿Y los plazos?,"Los plazos para enviar las solicitudes son del 10 de febrero al 10 de marzo de 2025. Además, para el reconocimiento de créditos, los plazos son del 20 de mayo al 21 de junio de 2024 para traslados, y del 12 de febrero al 12 de marzo de 2024 para admisión con estudios universitarios extranjeros.",C:/Users/David/Desktop/Chatbot/Datos\Reconocimiento\SFS24031.pdf
+memoria,¿Y es obligatoria?,"Sí, la solicitud de admisión y la solicitud de reconocimiento de créditos son obligatorias para solicitar plaza en estudios de grado a través de esta vía.",C:/Users/David/Desktop/Chatbot/Datos\Reconocimiento\SFS24032.pdf

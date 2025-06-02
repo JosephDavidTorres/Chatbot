@@ -22,6 +22,7 @@ base_folder = "C:/Users/David/Desktop/Chatbot/Datos"
 loaders = []
 processed_files = set()
 
+
 for folder_name in os.listdir(base_folder):
     folder_path = os.path.join(base_folder, folder_name)
     if os.path.isdir(folder_path):
@@ -124,10 +125,10 @@ for line in lines:
     elif line:
         pregunta_original = line
 
-        # 🧠 Verificar si hay memoria activa
+        # Realizamos la memoria guardando la información de la última pregunta y respuesta
         memoria_activa = memoria["ultima_pregunta"] and memoria["ultima_respuesta"]
 
-        # ✅ Validar longitud de pregunta (solo si no hay memoria)
+        # En caso de que no tenga memoria y la pregunta sea corta
         if not es_pregunta_valida(pregunta_original, memoria_activa):
             respuesta = "Por favor, especifica mejor tu pregunta."
             fuente = "-"
@@ -143,6 +144,7 @@ for line in lines:
             documentos = retriever.invoke(pregunta)
             contexto = "\n\n".join([doc.page_content for doc in documentos])
 
+            #Miramos si iene contexto la pregunta
             if not contexto.strip() or len(contexto.split()) < 50:
                 respuesta = "No tengo información suficiente en los documentos proporcionados."
                 fuente = "-"
@@ -151,7 +153,7 @@ for line in lines:
                 respuesta = output["result"]
                 fuente = output["source_documents"][0].metadata.get("source", "Documento desconocido") if output["source_documents"] else "-"
 
-            # Actualizar memoria
+            # Actualizar memoria para futuras conversaciones
             if respuesta.strip() == "No tengo información suficiente en los documentos proporcionados.":
                 memoria["ultima_pregunta"] = None
                 memoria["ultima_respuesta"] = None
@@ -163,7 +165,7 @@ for line in lines:
             "pregunta": pregunta_original,
             "respuesta": respuesta,
             "fuente": fuente
-        })
+        }) 
 
 # Guardar resultados
 with open(output_file, "w", newline="", encoding="utf-8") as csvfile:
