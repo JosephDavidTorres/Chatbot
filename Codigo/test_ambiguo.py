@@ -95,7 +95,7 @@ Clasifica la siguiente pregunta en una de estas tres categorías, siguiendo esta
 
 - CLARA: si la pregunta se entiende por sí sola y puede responderse directamente en el contexto de una universidad. Esto incluye preguntas sobre lugares ("¿Dónde está la biblioteca?"), fechas académicas, procedimientos comunes, asignaturas, matrículas o documentación.
 
-- AMBIGUA: si la pregunta no está clara por sí sola, tiene múltiples posibles significados, depende de una conversación anterior, o se refiere a algo sin contexto suficiente (por ejemplo: "¿Es obligatorio?", "¿Dónde es?", "¿Cuándo se hace?").
+- AMBIGUA: si la pregunta no está clara por sí sola, tiene múltiples posibles significados, depende de una conversación anterior, o se refiere a algo sin contexto suficiente (por ejemplo: "¿Es obligatorio?", "¿Dónde es?", "¿Cuándo se hace?"). Si se refiere a zonas que puede haber en una universidad no se considera ambigua sino Clara
 
 - FUERA DE CONTEXTO: si no está relacionada con la universidad, estudios, clases o procedimientos académicos (por ejemplo: "¿Cuántos habitantes tiene Francia?", "¿Cuál es el precio del Bitcoin?").
 

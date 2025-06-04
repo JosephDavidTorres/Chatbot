@@ -1,5 +1,5 @@
 tipo,pregunta,respuesta,fuente
-respuesta_directa,¿Dónde está la biblioteca?,"La biblioteca del campus está situada en el Campus Sur de la UPM. Su entrada principal se encuentra en la planta -1 y se extiende a través de varias plantas, ofreciendo diversos servicios y puestos de trabajo.",C:/Users/David/Desktop/Chatbot/Datos\Guia estudiante\guia-estudiante.pdf
+respuesta_directa,¿Dónde está la biblioteca?,La biblioteca del campus está situada en el Campus Sur de la UPM. Su entrada principal se encuentra en la planta -1 y cuenta con varias plantas con diferentes servicios y puestos de trabajo.,C:/Users/David/Desktop/Chatbot/Datos\Guia estudiante\guia-estudiante.pdf
 respuesta_directa,¿Y cuales son sus horarios?,"La biblioteca del campus está situada en el Campus Sur de la UPM. Su horario estándar durante el curso es de lunes a viernes de 9:00 a 21:00, y permanece cerrada los sábados y domingos. En horario extraordinario, abre de 10:00 a 14:00 y de 16:00 a 20:00 en días específicos. La biblioteca también cierra en festivos.",C:/Users/David/Desktop/Chatbot/Datos\Guia estudiante\guia-estudiante.pdf
 respuesta_directa,¿Cuáles son los horarios de atención de secretaría?,"Los horarios de atención de la Secretaría de Alumnos son:
 
@@ -17,5 +17,5 @@ fuera_de_contexto,¿Cuántos habitantes tiene Australia?,Esta pregunta no está 
 memoria,¿Cómo se solicita una beca?,No tengo información suficiente en los documentos proporcionados.,C:/Users/David/Desktop/Chatbot/Datos\Matricula\2022_23_Precios Publicos_MU.pdf
 memoria,¿Y los plazos?,"Tu pregunta es ambigua. Por favor, intenta especificarla mejor o haz una pregunta más clara.",-
 memoria,¿Y es obligatoria?,"Tu pregunta es ambigua. Por favor, intenta especificarla mejor o haz una pregunta más clara.",-
-memoria,donde esta la secretaria,"Tu pregunta es ambigua. Por favor, intenta especificarla mejor o haz una pregunta más clara.",-
-memoria,y cuando abren,"Tu pregunta es ambigua. Por favor, intenta especificarla mejor o haz una pregunta más clara.",-
+memoria,donde esta la secretaria,"La Secretaría de Alumnos está situada en la planta baja del Bloque VIII, también conocido como Edificio Prisma.",C:/Users/David/Desktop/Chatbot/Datos\Guia estudiante\guia-estudiante.pdf
+memoria,y cuando abren,"La Secretaría de Alumnos está situada en la planta baja del Bloque VIII (Edificio Prisma). Su horario de atención al público es de lunes a viernes de 10:00 a 13:00h, y de lunes a miércoles de 16:00 a 18:00h.",C:/Users/David/Desktop/Chatbot/Datos\secretaria-alumnos\secretaria-alumnos_texto.txt
