@@ -152,22 +152,41 @@ for line in lines:
     elif line:
         pregunta_original = line
 
-        # Clasificación
+        # Clasificación de la pregunta
         categoria = clasificacion_chain.run(pregunta_original).strip().upper()
 
-        if categoria == "AMBIGUA":
+        if categoria == "CLARA":
+            output = qa_chain.invoke({"query": pregunta_original})
+            respuesta = output["result"]
+            fuente = output["source_documents"][0].metadata.get("source", "-") if output["source_documents"] else "-"
+
+            if "No tengo información suficiente" not in respuesta:
+                memoria["ultima_pregunta"] = pregunta_original
+                memoria["ultima_respuesta"] = respuesta
+            else:
+                memoria["ultima_pregunta"] = None
+                memoria["ultima_respuesta"] = None
+
+            results.append({
+                "tipo": current_type,
+                "pregunta": pregunta_original,
+                "respuesta": respuesta,
+                "fuente": fuente
+            })
+            continue
+
+        elif categoria == "AMBIGUA":
             memoria_activa = memoria["ultima_pregunta"] and memoria["ultima_respuesta"]
 
             if memoria_activa:
-                # Construimos nueva pregunta combinando contexto anterior
                 pregunta_con_contexto = f"{memoria['ultima_pregunta']} -> {pregunta_original}"
                 output = qa_chain.invoke({"query": pregunta_con_contexto})
                 respuesta = output["result"]
-                fuente = output["source_documents"][0].metadata.get("source", "-") if output[
-                    "source_documents"] else "-"
+                fuente = output["source_documents"][0].metadata.get("source", "-") if output["source_documents"] else "-"
 
-                memoria["ultima_pregunta"] = pregunta_original
-                memoria["ultima_respuesta"] = respuesta
+                if "No tengo información suficiente" in respuesta:
+                    memoria["ultima_pregunta"] = None
+                    memoria["ultima_respuesta"] = None
             else:
                 respuesta = "Tu pregunta es ambigua. Por favor, intenta especificarla mejor o haz una pregunta más clara."
                 fuente = "-"
@@ -187,6 +206,7 @@ for line in lines:
             fuente = "-"
             memoria["ultima_pregunta"] = None
             memoria["ultima_respuesta"] = None
+
             results.append({
                 "tipo": current_type,
                 "pregunta": pregunta_original,
@@ -194,21 +214,6 @@ for line in lines:
                 "fuente": fuente
             })
             continue
-
-        # Si es clara, responder normalmente
-        output = qa_chain.invoke({"query": pregunta_original})
-        respuesta = output["result"]
-        fuente = output["source_documents"][0].metadata.get("source", "-") if output["source_documents"] else "-"
-
-        memoria["ultima_pregunta"] = pregunta_original
-        memoria["ultima_respuesta"] = respuesta
-
-        results.append({
-            "tipo": current_type,
-            "pregunta": pregunta_original,
-            "respuesta": respuesta,
-            "fuente": fuente
-        })
 
 # Guardar resultados
 with open(output_file, "w", newline="", encoding="utf-8") as csvfile:
