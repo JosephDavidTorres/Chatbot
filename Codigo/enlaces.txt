@@ -4,3 +4,8 @@ https://www.upm.es/Estudiantes/OrdenacionAcademica/CalendarioAcademico
 https://www.upm.es/Estudiantes/OrdenacionAcademica/CarneUniversitario
 https://www.upm.es/Estudiantes/OrdenacionAcademica/ActividadesAcreditablesEstudiosGrado
 https://www.upm.es/Estudiantes/OrdenacionAcademica/DevolucionTasas
+https://www.etsisi.upm.es/estudios/secretaria-alumnos
+https://www.etsisi.upm.es/secretaria-alumnos/permanencia
+https://www.etsisi.upm.es/secretaria-alumnos/tramites
+https://www.etsisi.upm.es/secretaria-alumnos/cambios-titulacion
+https://www.etsisi.upm.es/secretaria-alumnos/seguro-escolar

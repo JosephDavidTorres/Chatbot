@@ -118,6 +118,9 @@ with open(input_file, "r", encoding="utf-8") as f:
 current_type = "desconocido"
 results = []
 
+
+
+
 for line in lines:
     line = line.strip()
     if line.startswith("# type:"):
