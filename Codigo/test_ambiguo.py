@@ -15,8 +15,8 @@ api_key = os.getenv("OPENAI_API_KEY")
 # Rutas
 base_folder = "C:/Users/David/Desktop/Chatbot/Datos"
 persist_directory = "docs/chroma/"
-input_file = "test_questions.txt"
-output_file = "resultados_clasificacion.csv"
+input_file = "C:/Users/David/Desktop/Chatbot/test_questions.txt"
+output_file = "resultados_clasificacion_similarity.csv"
 
 # Cargar documentos
 loaders = []
@@ -56,27 +56,59 @@ splits = splitter.split_documents(pages)
 
 # Crear embeddings y base de datos vectorial
 embedding = OpenAIEmbeddings(openai_api_key=api_key)
-vectordb = Chroma.from_documents(documents=splits, embedding=embedding, persist_directory=persist_directory)
+
+import shutil
+
+# Limpiar base anterior si existe
+shutil.rmtree(persist_directory, ignore_errors=True)
+
+
+# Crear base vacía
+vectordb = Chroma(
+    embedding_function=embedding,
+    persist_directory=persist_directory
+)
+
+# Añadir documentos por lotes
+batch_size = 100
+for i in range(0, len(splits), batch_size):
+    batch = splits[i:i + batch_size]
+    texts = [doc.page_content for doc in batch]
+    metadatas = [doc.metadata for doc in batch]
+    vectordb.add_texts(texts=texts, metadatas=metadatas)
 
 # Modelo LLM
-llm = ChatOpenAI(model_name="gpt-4o", temperature=0, openai_api_key=api_key)
+# Modelo para clasificación (mejor comprensión semántica)
+llm_clasificador = ChatOpenAI(model_name="gpt-4o", temperature=0, openai_api_key=api_key)
+
+# Modelo para respuestas (eficiente y rápido) -  Comprobado que da mejores resultados
+llm_respuestas = ChatOpenAI(model_name="gpt-4o-mini", temperature=0, openai_api_key=api_key)
+
 
 # Prompt para clasificar preguntas
 clasificacion_prompt = PromptTemplate(
     input_variables=["pregunta"],
     template="""
-Clasifica la siguiente pregunta en una de estas categorías:
+Eres un asistente que clasifica preguntas realizadas por estudiantes dentro del ámbito universitario.
 
-- CLARA: si puede responderse de forma precisa por sí sola, sin depender de contexto previo.
-- AMBIGUA: si necesita más información, depende de una conversación anterior o es demasiado general.
-- FUERA DE CONTEXTO: si no tiene relación con el ámbito universitario o los documentos proporcionados.
+Clasifica la siguiente pregunta en una de estas tres categorías, siguiendo estas instrucciones:
+
+- CLARA: si la pregunta se entiende por sí sola y puede responderse directamente en el contexto de una universidad. Esto incluye preguntas sobre lugares ("¿Dónde está la biblioteca?"), fechas académicas, procedimientos comunes, asignaturas, matrículas o documentación.
+
+- AMBIGUA: si la pregunta no está clara por sí sola, tiene múltiples posibles significados, depende de una conversación anterior, o se refiere a algo sin contexto suficiente (por ejemplo: "¿Es obligatorio?", "¿Dónde es?", "¿Cuándo se hace?").
+
+- FUERA DE CONTEXTO: si no está relacionada con la universidad, estudios, clases o procedimientos académicos (por ejemplo: "¿Cuántos habitantes tiene Francia?", "¿Cuál es el precio del Bitcoin?").
 
 Pregunta: "{pregunta}"
 
 Devuelve solo una de estas palabras en mayúsculas: CLARA, AMBIGUA o FUERA DE CONTEXTO.
 """
 )
-clasificacion_chain = LLMChain(llm=llm, prompt=clasificacion_prompt)
+
+
+
+clasificacion_chain = LLMChain(llm=llm_clasificador, prompt=clasificacion_prompt)
+
 
 # Prompt para responder
 qa_prompt = PromptTemplate(
@@ -94,11 +126,11 @@ Respuesta:
 )
 
 # Configuración del retriever
-retriever = vectordb.as_retriever(search_type="mmr", search_kwargs={"k": 6})
+retriever = vectordb.as_retriever(search_type="similarity", search_kwargs={"k": 6})
 
 # Cadena de QA
 qa_chain = RetrievalQA.from_chain_type(
-    llm=llm,
+    llm=llm_respuestas,
     chain_type="stuff",
     retriever=retriever,
     return_source_documents=True,
