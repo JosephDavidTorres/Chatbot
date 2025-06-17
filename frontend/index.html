@@ -7,14 +7,19 @@
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <div id="chatbot-container">
-        <button id="toggle-chatbot">Abrir Chatbot</button>
-        <div id="chat-interface" style="display: none;">
-            <div id="chat-log"></div>
-            <input type="text" id="chat-input" placeholder="Escribe tu pregunta...">
-            <button id="send-btn">Enviar</button>
-        </div>
+
+    <!-- Asistente con imagen -->
+    <div id="asistente">
+        <img src="/static/ayudante-upm.png" alt="Asistente UPM">
     </div>
+
+    <!-- Chatbot oculto al inicio -->
+    <div id="chat-interface" style="display: none;">
+        <div id="chat-log"></div>
+        <input type="text" id="chat-input" placeholder="Escribe tu pregunta...">
+        <button id="send-btn">Enviar</button>
+    </div>
+
     <script src="/static/app.js"></script>
 </body>
 </html>

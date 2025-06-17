@@ -23,7 +23,9 @@ body {
 }
 
 #chat-interface {
-    margin-top: 10px;
+    position: fixed;
+    bottom: 120px;
+    right: 20px;
     width: 300px;
     height: 400px;
     background-color: #f0f0f0;
@@ -32,9 +34,12 @@ body {
     display: flex;
     flex-direction: column;
     padding: 10px;
+    z-index: 1001;
 }
 
 #chat-log {
+    display: flex;
+    flex-direction: column;
     flex-grow: 1;
     overflow-y: auto;
     padding: 5px;
@@ -43,6 +48,7 @@ body {
     margin-bottom: 10px;
     font-size: 14px;
     line-height: 1.4;
+    max-height: 300px;
 }
 
 #chat-input {
@@ -50,6 +56,8 @@ body {
     padding: 5px;
     box-sizing: border-box;
     font-size: 14px;
+    resize: none; /* 🔒 evita que crezca */
+    height: 30px;  /* 🔒 fija altura */
 }
 
 #send-btn {
@@ -61,4 +69,73 @@ body {
     border: none;
     cursor: pointer;
     border-radius: 4px;
+    height: 35px; /* 🔒 altura coherente */
+}
+
+#asistente {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#asistente {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 1000;
+    display: inline-block;
+}
+
+#asistente img {
+    width: 80px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, border 0.3s ease;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    border: 2px solid transparent;
+}
+
+#asistente img:hover {
+    transform: scale(1.05);
+    border: 2px solid #004a99;
+}
+
+.mensaje-ayuda {
+    margin-top: 5px;
+    background-color: #004a99;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.mensaje {
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    max-width: 90%;
+    word-wrap: break-word;
+    font-size: 14px;
+    display: inline-block;
+}
+
+
+.mensaje.usuario {
+    background-color: #d6eaff;
+    align-self: flex-end;
+    text-align: right;
+    color: #004a99;
+}
+
+
+.mensaje.chatbot {
+    background-color: #f0f0f0;
+    align-self: flex-start;
+    text-align: left;
+    color: #222;
 }

@@ -1,6 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", function () {
-    const toggleBtn = document.getElementById("toggle-chatbot");
+    const toggleBtn = document.getElementById("asistente");
     const chatInterface = document.getElementById("chat-interface");
     const sendBtn = document.getElementById("send-btn");
     const inputField = document.getElementById("chat-input");
@@ -19,9 +19,10 @@ document.addEventListener("DOMContentLoaded", function () {
         const pregunta = inputField.value.trim();
         if (!pregunta) return;
 
-        const userMsg = document.createElement("div");
-        userMsg.textContent = "Tú: " + pregunta;
-        chatLog.appendChild(userMsg);
+       const userMsg = document.createElement("div");
+       userMsg.className = "mensaje usuario";
+       userMsg.textContent = pregunta;
+       chatLog.appendChild(userMsg);
 
         inputField.value = "";
 
@@ -34,7 +35,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const data = await response.json();
             const botMsg = document.createElement("div");
-            botMsg.textContent = "Chatbot: " + data.respuesta;
+            botMsg.className = "mensaje chatbot";
+            botMsg.textContent = data.respuesta;
             chatLog.appendChild(botMsg);
             chatLog.scrollTop = chatLog.scrollHeight;
         } catch (error) {
