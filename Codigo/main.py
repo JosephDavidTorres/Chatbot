@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 from langchain_community.document_loaders import PyPDFLoader, TextLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
-from langchain_community.vectorstores import Chroma
+from langchain_chroma import Chroma
 from langchain.chains import RetrievalQA, LLMChain
 from langchain.prompts import PromptTemplate
 
@@ -85,7 +85,7 @@ Pregunta: "{pregunta}"
 Devuelve solo una de estas palabras en mayúsculas: CLARA, AMBIGUA o FUERA DE CONTEXTO.
 """
 )
-clasificacion_chain = LLMChain(llm=llm_clasificador, prompt=clasificacion_prompt)
+clasificacion_chain = clasificacion_prompt | llm_clasificador
 
 qa_prompt = PromptTemplate(
     input_variables=["context", "question"],
@@ -134,8 +134,7 @@ class PreguntaRequest(BaseModel):
 @app.post("/preguntar")
 def preguntar(req: PreguntaRequest):
     pregunta = req.pregunta.strip()
-    categoria = clasificacion_chain.run(pregunta).strip().upper()
-
+    categoria = clasificacion_chain.invoke(pregunta).content.strip().upper()
     if categoria == "CLARA":
         output = qa_chain.invoke({"query": pregunta})
         respuesta = output["result"]

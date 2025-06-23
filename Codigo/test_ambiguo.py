@@ -1,5 +1,6 @@
 import os
 import csv
+import shutil
 from dotenv import load_dotenv
 from langchain_community.document_loaders import PyPDFLoader, TextLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -15,8 +16,8 @@ api_key = os.getenv("OPENAI_API_KEY")
 # Rutas
 base_folder = "C:/Users/David/Desktop/Chatbot/Datos"
 persist_directory = "docs/chroma/"
-input_file = "C:/Users/David/Desktop/Chatbot/TESTS.txt"
-output_file = "resultados_clasificacion_similarity.csv"
+input_file = "C:/Users/David/Desktop/Chatbot/Tests-Documentos.txt"
+output_file = "resultados_clasificacion_similarity-completo.csv"
 
 # Cargar documentos
 loaders = []
@@ -53,14 +54,13 @@ for loader in loaders:
 # Dividir documentos en fragmentos
 splitter = RecursiveCharacterTextSplitter(chunk_size=4000, chunk_overlap=1000)
 splits = splitter.split_documents(pages)
-
+shutil.rmtree(persist_directory, ignore_errors=True)
 # Crear embeddings y base de datos vectorial
 embedding = OpenAIEmbeddings(openai_api_key=api_key)
 
-import shutil
 
 # Limpiar base anterior si existe
-shutil.rmtree(persist_directory, ignore_errors=True)
+
 
 
 # Crear base vacía

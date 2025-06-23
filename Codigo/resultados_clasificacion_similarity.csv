@@ -6,16 +6,14 @@ respuesta_directa,¿Qué documentos se necesitan para la matrícula?,"Se necesit
 1. Certificación académica oficial de los estudios realizados, con calificaciones y nota media aprobatoria.
 2. Programa de las asignaturas aprobadas, sellado y diligenciado por el centro donde se impartió.
 3. Pasaporte, DNI/NIE (o certificación de los Servicios Consulares para estudiantes extranjeros).
-4. Resguardo de haber solicitado plaza.
-5. Documentación que acredite las exenciones de pago, si corresponde.
-6. Orden de domiciliación bancaria (SEPA), si es la primera vez que se domicilia el pago o se cambian los datos bancarios.",C:/Users/David/Desktop/Chatbot/Datos\Reconocimiento\SFS24031.pdf
-respuesta_directa,¿Dónde se encuentra la biblioteca universitaria?,La biblioteca universitaria se encuentra en el Campus Sur de la UPM.,C:/Users/David/Desktop/Chatbot/Datos\Guia estudiante\guia-estudiante.pdf
+4. Resguardo de haber solicitado plaza.",C:/Users/David/Desktop/Chatbot/Datos\Reconocimiento\SFS24031.pdf
+respuesta_directa,¿Dónde se encuentra la biblioteca universitaria?,La biblioteca universitaria del Campus Sur se encuentra en el campus de la UPM. Su entrada principal está situada en el Bloque del campus.,C:/Users/David/Desktop/Chatbot/Datos\Guia estudiante\guia-estudiante.pdf
 respuesta_directa,¿A qué hora abre el comedor universitario?,El comedor universitario abre de lunes a viernes de 13:00 a 16:00 horas.,C:/Users/David/Desktop/Chatbot/Datos\Guia estudiante\guia-estudiante.pdf
 respuesta_directa,¿Cuáles son las asignaturas del segundo cuatrimestre?,No tengo información suficiente en los documentos proporcionados.,C:/Users/David/Desktop/Chatbot/Datos\Guia estudiante\guia-estudiante.pdf
 respuesta_directa,¿Dónde se solicita una beca?,No tengo información suficiente en los documentos proporcionados.,C:/Users/David/Desktop/Chatbot/Datos\Reconocimiento\SFS25790.pdf
-respuesta_directa,¿Cómo se tramita un cambio de titulación?,"Para tramitar un cambio de titulación, se debe solicitar a través del Rectorado, utilizando la vía web, en el periodo del 17 de mayo al 17 de junio. Es necesario consultar el número de plazas disponibles y cumplir con los requisitos de nota media de la carrera y tener al menos 30 créditos superados de materia básica. Se cobrará el reconocimiento de las asignaturas superadas y las asignaturas pendientes se pagarán como nuevas. Además, se pagará el traslado de expediente.",C:/Users/David/Desktop/Chatbot/Datos\cambios-titulacion\cambios-titulacion-22-23-4.pdf
+respuesta_directa,¿Cómo se tramita un cambio de titulación?,"Para tramitar un cambio de titulación, se debe solicitar a través del Rectorado, utilizando la vía web, en el plazo establecido (del 17 de mayo al 17 de junio). Es necesario consultar el número de plazas disponibles y cumplir con los requisitos, como tener una nota media de la carrera y al menos 30 créditos superados de materia básica. Se cobrará el reconocimiento de las asignaturas superadas y las asignaturas pendientes se pagarán como nuevas.",C:/Users/David/Desktop/Chatbot/Datos\cambios-titulacion\cambios-titulacion-22-23-4.pdf
 respuesta_directa,¿Se puede aparcar en el campus?,No tengo información suficiente en los documentos proporcionados.,C:/Users/David/Desktop/Chatbot/Datos\Guia estudiante\guia-estudiante.pdf
-respuesta_directa,¿Cuándo se publica el calendario de exámenes?,No tengo información suficiente en los documentos proporcionados.,C:/Users/David/Desktop/Chatbot/Datos\tramites\examenes_comunes_primer_semestre.pdf
+respuesta_directa,¿Cuándo se publica el calendario de exámenes?,No tengo información suficiente en los documentos proporcionados.,C:/Users/David/Desktop/Chatbot/Datos\permanencia\examenes_comunes_primer_semestre.pdf
 ambigua,¿Dónde es?,"Tu pregunta es ambigua. Por favor, intenta especificarla mejor o haz una pregunta más clara.",-
 ambigua,¿Qué pasa al final?,"Tu pregunta es ambigua. Por favor, intenta especificarla mejor o haz una pregunta más clara.",-
 ambigua,¿Es obligatorio?,"Tu pregunta es ambigua. Por favor, intenta especificarla mejor o haz una pregunta más clara.",-
@@ -27,7 +25,7 @@ fuera_de_contexto,¿Quién escribió “Cien años de soledad”?,Esta pregunta 
 fuera_de_contexto,¿Cuántos habitantes tiene Canadá?,Esta pregunta no está relacionada con los documentos universitarios proporcionados.,-
 fuera_de_contexto,¿Quién inventó el fútbol?,Esta pregunta no está relacionada con los documentos universitarios proporcionados.,-
 encadenada,¿Dónde se hace la matrícula?,La matrícula se realiza a través de la página web de automatrícula.,C:/Users/David/Desktop/Chatbot/Datos\Guia estudiante\guia-estudiante.pdf
-encadenada,¿Y qué documentos necesito?,"La matrícula se realiza a través de la página web de automatrícula. Los documentos necesarios incluyen la carta de pago generada por la aplicación de automatrícula, que debe ser abonada y entregada en la Secretaría de Alumnos, así como la documentación que acredite las exenciones de pago si corresponde. Además, se requiere una orden de domiciliación bancaria (SEPA) si es la primera vez que se domicilia el pago o si se cambian los datos bancarios.",C:/Users/David/Desktop/Chatbot/Datos\Matricula\SFS17391.pdf
-encadenada,¿Cuándo abre el plazo?,La matrícula se realiza a través de la página web de automatrícula. El plazo para el período ordinario de matrícula abre del 17 de julio al 2 de agosto de 2024.,C:/Users/David/Desktop/Chatbot/Datos\Guia estudiante\guia-estudiante.pdf
-encadenada,¿Y dónde se entrega?,La matrícula se realiza a través de la página web de automatrícula. La documentación se debe entregar en la Secretaría de Alumnos de la Escuela/Facultad a través de la Sede Electrónica.,C:/Users/David/Desktop/Chatbot/Datos\Guia estudiante\guia-estudiante.pdf
-encadenada,¿A qué correo hay que enviarlo?,No tengo información suficiente en los documentos proporcionados.,C:/Users/David/Desktop/Chatbot/Datos\Guia estudiante\guia-estudiante.pdf
+encadenada,¿Y qué documentos necesito?,No tengo información suficiente en los documentos proporcionados.,C:/Users/David/Desktop/Chatbot/Datos\Matricula\SFS17391.pdf
+encadenada,¿Cuándo abre el plazo?,"Tu pregunta es ambigua. Por favor, intenta especificarla mejor o haz una pregunta más clara.",-
+encadenada,¿Y dónde se entrega?,"Tu pregunta es ambigua. Por favor, intenta especificarla mejor o haz una pregunta más clara.",-
+encadenada,¿A qué correo hay que enviarlo?,"Tu pregunta es ambigua. Por favor, intenta especificarla mejor o haz una pregunta más clara.",-
