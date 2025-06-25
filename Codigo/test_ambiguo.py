@@ -16,8 +16,8 @@ api_key = os.getenv("OPENAI_API_KEY")
 # Rutas
 base_folder = "C:/Users/David/Desktop/Chatbot/Datos"
 persist_directory = "docs/chroma/"
-input_file = "C:/Users/David/Desktop/Chatbot/Tests-Documentos.txt"
-output_file = "resultados_clasificacion_similarity-completo.csv"
+input_file = "C:/Users/David/Desktop/Chatbot/Test-PalabrasClave.txt"
+output_file = "resultados_clasificacion_similarity-palabrasClave.csv"
 
 # Cargar documentos
 loaders = []
