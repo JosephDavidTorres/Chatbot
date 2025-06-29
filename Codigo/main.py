@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 from langchain_community.document_loaders import PyPDFLoader, TextLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
-from langchain_chroma import Chroma
+from langchain_community.vectorstores import Chroma
 from langchain.chains import RetrievalQA, LLMChain
 from langchain.prompts import PromptTemplate
 
@@ -92,6 +92,7 @@ qa_prompt = PromptTemplate(
     template="""
 Usando únicamente el siguiente contexto, responde la pregunta de forma concisa.
 Si la respuesta no se encuentra en el contexto, responde: "No tengo información suficiente en los documentos proporcionados."
+Responde solo a la pregunta actual. Usa la pregunta anterior solo como ayuda para interpretarla si es ambigua y que te ayude a responderla.
 
 Contexto: {context}
 
@@ -101,7 +102,7 @@ Respuesta:
 """
 )
 
-retriever = vectordb.as_retriever(search_type="similarity", search_kwargs={"k": 6})
+retriever = vectordb.as_retriever(search_type="mmr", search_kwargs={"k": 6})
 qa_chain = RetrievalQA.from_chain_type(
     llm=llm_respuestas,
     chain_type="stuff",
@@ -146,7 +147,10 @@ def preguntar(req: PreguntaRequest):
             memoria["ultima_respuesta"] = None
 
     elif categoria == "AMBIGUA" and memoria["ultima_pregunta"] and memoria["ultima_respuesta"]:
-        pregunta_con_contexto = f"{memoria['ultima_pregunta']} -> {pregunta}"
+        pregunta_con_contexto = (
+            f"Pregunta actual: {pregunta}\n"
+            f"Pregunta anterior: {memoria['ultima_pregunta']}"
+        )
         output = qa_chain.invoke({"query": pregunta_con_contexto})
         respuesta = output["result"]
         if "No tengo información suficiente" in respuesta:

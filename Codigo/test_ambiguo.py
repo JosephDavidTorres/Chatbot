@@ -16,8 +16,8 @@ api_key = os.getenv("OPENAI_API_KEY")
 # Rutas
 base_folder = "C:/Users/David/Desktop/Chatbot/Datos"
 persist_directory = "docs/chroma/"
-input_file = "C:/Users/David/Desktop/Chatbot/Test-PalabrasClave.txt"
-output_file = "resultados_clasificacion_similarity-palabrasClave.csv"
+input_file = "/Codigo/Test/TESTS.txt"
+output_file = "resultados_clasificacion_mmr-cortas.csv"
 
 # Cargar documentos
 loaders = []
@@ -107,7 +107,7 @@ Devuelve solo una de estas palabras en mayúsculas: CLARA, AMBIGUA o FUERA DE CO
 
 
 
-clasificacion_chain = LLMChain(llm=llm_clasificador, prompt=clasificacion_prompt)
+clasificacion_chain = clasificacion_prompt | llm_clasificador
 
 
 # Prompt para responder
@@ -116,6 +116,7 @@ qa_prompt = PromptTemplate(
     template="""
 Usando únicamente el siguiente contexto, responde la pregunta de forma concisa.
 Si la respuesta no se encuentra en el contexto, responde: "No tengo información suficiente en los documentos proporcionados."
+Si recibes 2 preguntas, la primera es solo para darte el contexto de que ha preguntado antes, no hace falta responder la primera pregunta
 
 Contexto: {context}
 
@@ -126,7 +127,7 @@ Respuesta:
 )
 
 # Configuración del retriever
-retriever = vectordb.as_retriever(search_type="similarity", search_kwargs={"k": 6})
+retriever = vectordb.as_retriever(search_type="mmr", search_kwargs={"k": 6})
 
 # Cadena de QA
 qa_chain = RetrievalQA.from_chain_type(
@@ -153,7 +154,7 @@ for line in lines:
         pregunta_original = line
 
         # Clasificación de la pregunta
-        categoria = clasificacion_chain.run(pregunta_original).strip().upper()
+        categoria = clasificacion_chain.invoke(pregunta_original).content.strip().upper()
 
         if categoria == "CLARA":
             output = qa_chain.invoke({"query": pregunta_original})

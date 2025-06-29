@@ -1,14 +1,14 @@
 tipo,pregunta,respuesta,fuente
-respuesta_directa,¿Dónde está la secretaría?,La secretaría de alumnos está situada en la planta baja del Bloque VIII.,C:/Users/David/Desktop/Chatbot/Datos\Guia estudiante\guia-estudiante.pdf
+respuesta_directa,¿Dónde está la secretaría?,"La secretaría de alumnos está situada en la planta baja del Bloque VIII, en el Edificio Prisma.",C:/Users/David/Desktop/Chatbot/Datos\Guia estudiante\guia-estudiante.pdf
 respuesta_directa,¿Cuándo empiezan las clases del primer semestre?,Las clases del primer semestre comienzan el lunes 6 de septiembre.,C:/Users/David/Desktop/Chatbot/Datos\Guia estudiante\guia-estudiante.pdf
-respuesta_directa,¿Qué documentos se necesitan para la matrícula?,"Se necesitan los siguientes documentos para la matrícula:
+respuesta_directa,¿Qué documentos se necesitan para la matrícula?,"Los documentos necesarios para la matrícula son:
 
-1. Certificación académica oficial de los estudios realizados, con calificaciones y nota media aprobatoria.
-2. Programa de las asignaturas aprobadas, sellado y diligenciado por el centro donde se impartieron.
-3. Pasaporte, DNI/NIE (o certificación de los Servicios Consulares para estudiantes extranjeros).
+1. Certificación académica oficial de los estudios realizados, con calificaciones y nota media.
+2. Programa de las asignaturas aprobadas, sellado y diligenciado por el centro.
+3. Pasaporte, DNI/NIE (o certificación consular para estudiantes extranjeros).
 4. Resguardo de haber solicitado plaza.
 5. Documentación que acredite las exenciones de pago, si corresponde.
-6. Orden de domiciliación bancaria (SEPA), si es la primera vez que se domicilia el pago o se cambian los datos bancarios.
+6. Orden de domiciliación bancaria (SEPA), si es la primera vez que se domicilia el pago o se cambian datos bancarios.
 7. 2 fotos.
 8. Fotocopia del pasaporte o N.I.E.
 9. Resolución de la Subdirección General de Títulos, Convalidaciones y Homologaciones.",C:/Users/David/Desktop/Chatbot/Datos\Reconocimiento\SFS24031.pdf
@@ -19,8 +19,10 @@ respuesta_directa,¿Dónde se solicita una beca?,No tengo información suficient
 respuesta_directa,¿Cómo se tramita un cambio de titulación?,"Para tramitar un cambio de titulación, se debe realizar la solicitud a través del Rectorado, ya sea por la web o en persona, en el periodo del 17 de mayo al 17 de junio. Es necesario consultar el número de plazas disponibles y cumplir con los requisitos de tener una nota media de la carrera y al menos 30 créditos superados de materia básica. Además, se cobrará el reconocimiento de las asignaturas superadas y las asignaturas pendientes se pagarán como nuevas.",C:/Users/David/Desktop/Chatbot/Datos\cambios-titulacion\cambios-titulacion-22-23-4.pdf
 respuesta_directa,¿Se puede aparcar en el campus?,No tengo información suficiente en los documentos proporcionados.,C:/Users/David/Desktop/Chatbot/Datos\Guia estudiante\guia-estudiante.pdf
 respuesta_directa,¿Cuándo se publica el calendario de exámenes?,No tengo información suficiente en los documentos proporcionados.,C:/Users/David/Desktop/Chatbot/Datos\cambios-titulacion\examenes_comunes_primer_semestre.pdf
-ambigua,¿Dónde es?,"Tu pregunta es ambigua. Por favor, intenta especificarla mejor o haz una pregunta más clara.",-
-ambigua,¿Qué pasa al final?,"Tu pregunta es ambigua. Por favor, intenta especificarla mejor o haz una pregunta más clara.",-
+respuesta_directa,¿Donde está la Universidad?,"La Universidad Politécnica de Madrid se encuentra en Carretera de Valencia (A-3), km. 7, 28031, Madrid, España.",C:/Users/David/Desktop/Chatbot/Datos\Guia estudiante\guia-estudiante.pdf
+respuesta_directa,¿Donde esta la secretaría?,"La secretaría de alumnos está situada en la planta baja del Bloque VIII, en el Edificio Prisma.",C:/Users/David/Desktop/Chatbot/Datos\Guia estudiante\guia-estudiante.pdf
+ambigua,¿Dónde es?,"La secretaría de alumnos de la escuela está situada en la planta baja del Bloque VIII, en el Edificio Prisma.",C:/Users/David/Desktop/Chatbot/Datos\Guia estudiante\guia-estudiante.pdf
+ambigua,¿Qué pasa al final?,La secretaría de alumnos de la escuela está situada en la planta baja del Bloque VIII. No tengo información suficiente en los documentos proporcionados.,C:/Users/David/Desktop/Chatbot/Datos\Guia estudiante\guia-estudiante.pdf
 ambigua,¿Es obligatorio?,"Tu pregunta es ambigua. Por favor, intenta especificarla mejor o haz una pregunta más clara.",-
 ambigua,¿A qué hora?,"Tu pregunta es ambigua. Por favor, intenta especificarla mejor o haz una pregunta más clara.",-
 ambigua,¿Cuándo se hace?,"Tu pregunta es ambigua. Por favor, intenta especificarla mejor o haz una pregunta más clara.",-

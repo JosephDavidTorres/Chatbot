@@ -1,0 +1,34 @@
+# type: respuesta_directa
+¿Dónde está la secretaría?
+¿Cuándo empiezan las clases del primer semestre?
+¿Qué documentos se necesitan para la matrícula?
+¿Dónde se encuentra la biblioteca universitaria?
+¿A qué hora abre el comedor universitario?
+¿Cuáles son las asignaturas del segundo cuatrimestre?
+¿Dónde se solicita una beca?
+¿Cómo se tramita un cambio de titulación?
+¿Se puede aparcar en el campus?
+¿Cuándo se publica el calendario de exámenes?
+¿Donde está la Universidad?
+¿Donde esta la secretaría?
+
+# type: ambigua
+¿Dónde es?
+¿Qué pasa al final?
+¿Es obligatorio?
+¿A qué hora?
+¿Cuándo se hace?
+
+# type: fuera_de_contexto
+¿Cuál es el precio del Bitcoin?
+¿Quién ganó Eurovisión 2023?
+¿Quién escribió “Cien años de soledad”?
+¿Cuántos habitantes tiene Canadá?
+¿Quién inventó el fútbol?
+
+# type: encadenada
+¿Dónde se hace la matrícula?
+¿Y qué documentos necesito?
+¿Cuándo abre el plazo?
+¿Y dónde se entrega?
+¿A qué correo hay que enviarlo?
