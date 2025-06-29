@@ -16,7 +16,7 @@ api_key = os.getenv("OPENAI_API_KEY")
 # Rutas
 base_folder = "C:/Users/David/Desktop/Chatbot/Datos"
 persist_directory = "docs/chroma/"
-input_file = "/Codigo/Test/TESTS.txt"
+input_file = "/Codigo/Test/Test-preguntas-cortas.txt"
 output_file = "resultados_clasificacion_mmr-cortas.csv"
 
 # Cargar documentos
