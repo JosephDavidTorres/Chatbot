@@ -14,11 +14,19 @@ from langchain_community.vectorstores import Chroma
 from langchain.chains import RetrievalQA, LLMChain
 from langchain.prompts import PromptTemplate
 
-# --- Configuraciones iniciales ---
+#Cargar la API (En caso de que no exista se necesitará conseguir una)
 load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
 
-base_folder = "C:/Users/David/Desktop/Chatbot/Datos"
+#Para Verificar la ruta de los Datos, en principio la carpeta del codigo deberá estar en el escritorio
+desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")
+
+# Ruta base relativa al escritorio
+base_folder = os.path.join(desktop_path, "Chatbot", "Datos")
+
+if not os.path.exists(base_folder):
+    raise FileNotFoundError(f"La carpeta '{base_folder}' no existe.")
+
 persist_directory = "docs/chroma/"
 
 # --- Cargar documentos ---

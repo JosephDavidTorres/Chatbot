@@ -1,0 +1,44 @@
+tipo,pregunta,respuesta,fuente
+respuesta_directa,¿Dónde está la secretaría?,La secretaría de alumnos está situada en la planta baja del Bloque VIII.,C:/Users/David/Desktop/Chatbot/Datos\Guia estudiante\guia-estudiante.pdf
+respuesta_directa,¿Cuándo empiezan las clases del primer semestre?,Las clases del primer semestre comienzan el lunes 6 de septiembre.,C:/Users/David/Desktop/Chatbot/Datos\Guia estudiante\guia-estudiante.pdf
+respuesta_directa,¿Qué documentos se necesitan para la matrícula?,"Para la matrícula se necesitan los siguientes documentos:
+
+1. Copia del Pasaporte.
+2. Certificación acreditativa de la nacionalidad del solicitante.
+3. Certificación académica de los estudios realizados.
+4. Programa de las asignaturas aprobadas, sellado y diligenciado.
+5. Plan de Estudios cursado por el alumno.
+6. Resguardo de haber abonado los derechos del traslado de expediente (si aplica).
+7. Documentación que acredite las exenciones (si aplica).
+8. Orden de domiciliación bancaria (si se elige esta modalidad de pago).",C:/Users/David/Desktop/Chatbot/Datos\Matricula\SFS17394.pdf
+respuesta_directa,¿Dónde se encuentra la biblioteca universitaria?,No tengo información suficiente en los documentos proporcionados.,C:/Users/David/Desktop/Chatbot/Datos\Guia estudiante\guia-estudiante.pdf
+respuesta_directa,¿A qué hora abre el comedor universitario?,El autoservicio de comidas abre de lunes a viernes de 13:00 a 16:00 horas.,C:/Users/David/Desktop/Chatbot/Datos\Guia estudiante\guia-estudiante.pdf
+respuesta_directa,¿Cuáles son las asignaturas del segundo cuatrimestre?,No tengo información suficiente en los documentos proporcionados.,C:/Users/David/Desktop/Chatbot/Datos\Guia estudiante\guia-estudiante.pdf
+respuesta_directa,¿Dónde se solicita una beca?,Las solicitudes se enviarán por correo electrónico a la Secretaría del Centro en el que quiere estudiar del 10 de febrero al 10 de marzo de 2025.,C:/Users/David/Desktop/Chatbot/Datos\secretaria-alumnos\resumen_normas_de_matricula_2024-25.pdf
+respuesta_directa,¿Cómo se tramita un cambio de titulación?,No tengo información suficiente en los documentos proporcionados.,C:/Users/David/Desktop/Chatbot/Datos\cambios-titulacion\cambios-titulacion-22-23-4.pdf
+respuesta_directa,¿Se puede aparcar en el campus?,No tengo información suficiente en los documentos proporcionados.,C:/Users/David/Desktop/Chatbot/Datos\Guia estudiante\guia-estudiante.pdf
+respuesta_directa,¿Cuándo se publica el calendario de exámenes?,No tengo información suficiente en los documentos proporcionados.,C:/Users/David/Desktop/Chatbot/Datos\CalendarioAcademico\SFS27758.pdf
+respuesta_directa,¿Donde está la Universidad?,"La Universidad está situada en Paseo Juan XXIII, 11 – 28040 Madrid.",C:/Users/David/Desktop/Chatbot/Datos\Guia estudiante\guia-estudiante.pdf
+respuesta_directa,¿Donde esta la secretaría?,La secretaría de alumnos está situada en la planta baja del Bloque VIII.,C:/Users/David/Desktop/Chatbot/Datos\Guia estudiante\guia-estudiante.pdf
+ambigua,¿Dónde es?,La secretaría de alumnos está situada en la planta baja del Bloque VIII.,C:/Users/David/Desktop/Chatbot/Datos\Guia estudiante\guia-estudiante.pdf
+ambigua,¿Qué pasa al final?,No tengo información suficiente en los documentos proporcionados.,C:/Users/David/Desktop/Chatbot/Datos\Guia estudiante\guia-estudiante.pdf
+ambigua,¿Es obligatorio?,"Tu pregunta es ambigua. Por favor, intenta especificarla mejor o haz una pregunta más clara.",-
+ambigua,¿A qué hora?,"Tu pregunta es ambigua. Por favor, intenta especificarla mejor o haz una pregunta más clara.",-
+ambigua,¿Cuándo se hace?,"Tu pregunta es ambigua. Por favor, intenta especificarla mejor o haz una pregunta más clara.",-
+fuera_de_contexto,¿Cuál es el precio del Bitcoin?,Esta pregunta no está relacionada con los documentos universitarios proporcionados.,-
+fuera_de_contexto,¿Quién ganó Eurovisión 2023?,Esta pregunta no está relacionada con los documentos universitarios proporcionados.,-
+fuera_de_contexto,¿Quién escribió “Cien años de soledad”?,Esta pregunta no está relacionada con los documentos universitarios proporcionados.,-
+fuera_de_contexto,¿Cuántos habitantes tiene Canadá?,Esta pregunta no está relacionada con los documentos universitarios proporcionados.,-
+fuera_de_contexto,¿Quién inventó el fútbol?,Esta pregunta no está relacionada con los documentos universitarios proporcionados.,-
+encadenada,¿Dónde se hace la matrícula?,La matrícula se realiza a través de la página web de automatrícula.,C:/Users/David/Desktop/Chatbot/Datos\Guia estudiante\guia-estudiante.pdf
+encadenada,¿Y qué documentos necesito?,"Para matricularte, necesitas presentar los siguientes documentos:
+
+1. Certificación acreditativa de la nacionalidad del solicitante.
+2. Certificación académica de los estudios realizados.
+3. Programa de las asignaturas aprobadas, sellado y diligenciado.
+4. Plan de Estudios cursado por el alumno.
+
+Si las fotocopias están cotejadas y legalizadas, no es necesario presentar el original. Además, si aplicas a alguna exención, deberás presentar la documentación que acredite dicha exención.",C:/Users/David/Desktop/Chatbot/Datos\Matricula\SFS17391.pdf
+encadenada,¿Cuándo abre el plazo?,"El plazo de matrícula para estudiantes admitidos/as para acceder a primer curso, por la vía de la preinscripción del periodo ordinario, abre del 12 al 16 de julio de 2024.",C:/Users/David/Desktop/Chatbot/Datos\Matricula\SFS17391.pdf
+encadenada,¿Y dónde se entrega?,La matrícula se entrega en la Secretaría de Alumnos de la Escuela/Facultad.,C:/Users/David/Desktop/Chatbot/Datos\Guia estudiante\guia-estudiante.pdf
+encadenada,¿A qué correo hay que enviarlo?,El correo al que hay que enviarlo es negociado.alumnos@etsisi.upm.es.,C:/Users/David/Desktop/Chatbot/Datos\Matricula\SFS17391.pdf

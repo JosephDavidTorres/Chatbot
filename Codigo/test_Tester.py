@@ -50,7 +50,7 @@ for loader in loaders:
         continue
 
 # Dividir documentos
-splitter = RecursiveCharacterTextSplitter(chunk_size=4000, chunk_overlap=1000)
+splitter = RecursiveCharacterTextSplitter(chunk_size=2000, chunk_overlap=600)
 splits = splitter.split_documents(pages)
 shutil.rmtree(persist_directory, ignore_errors=True)
 
@@ -109,7 +109,7 @@ Respuesta:
 
 # Ejecutar tests
 test_folder = "Test"
-output_folder = "Resultados"
+output_folder = "Resultados2000"
 os.makedirs(output_folder, exist_ok=True)
 
 for file_name in os.listdir(test_folder):
