@@ -13,8 +13,19 @@ from langchain.prompts import PromptTemplate
 load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
 
-# Rutas
-base_folder = "C:/Users/David/Desktop/Chatbot/Datos"
+# Comandos para asegurarse que el script funcione en cualquier dispositivo
+desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")
+
+current_file_path = os.path.abspath(__file__)
+
+root_folder = os.path.basename(os.path.dirname(os.path.dirname(current_file_path)))
+
+base_folder = os.path.join(desktop_path, root_folder, "Datos")
+
+# Para ver si no va
+if not os.path.exists(base_folder):
+    raise FileNotFoundError(f"La carpeta '{base_folder}' no existe.")
+
 persist_directory = "docs/chroma/"
 
 # Cargar documentos

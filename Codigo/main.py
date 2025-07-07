@@ -18,18 +18,22 @@ from langchain.prompts import PromptTemplate
 load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
 
-#Para Verificar la ruta de los Datos, en principio la carpeta del codigo deberá estar en el escritorio
+# Comandos para asegurarse que el script funcione en cualquier dispositivo
 desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")
 
-# Ruta base relativa al escritorio
-base_folder = os.path.join(desktop_path, "Chatbot", "Datos")
+current_file_path = os.path.abspath(__file__)
 
+root_folder = os.path.basename(os.path.dirname(os.path.dirname(current_file_path)))
+
+base_folder = os.path.join(desktop_path, root_folder, "Datos")
+
+# Para ver si no va
 if not os.path.exists(base_folder):
     raise FileNotFoundError(f"La carpeta '{base_folder}' no existe.")
 
 persist_directory = "docs/chroma/"
 
-# --- Cargar documentos ---
+#Cargar los documentos
 loaders = []
 processed_files = set()
 for folder_name in os.listdir(base_folder):
@@ -60,7 +64,7 @@ for loader in loaders:
     except Exception:
         continue
 
-# --- Preparar textos ---
+# Generar los embeddings y la fragmentacion
 splitter = RecursiveCharacterTextSplitter(chunk_size=4000, chunk_overlap=1000)
 splits = splitter.split_documents(pages)
 
@@ -73,11 +77,11 @@ for i in range(0, len(splits), batch_size):
     batch = splits[i:i + batch_size]
     vectordb.add_texts([doc.page_content for doc in batch], [doc.metadata for doc in batch])
 
-# --- Modelos ---
+# Los 2 modelos, uno de clasificación y otro para las respuestas
 llm_clasificador = ChatOpenAI(model_name="gpt-4o", temperature=0, openai_api_key=api_key)
 llm_respuestas = ChatOpenAI(model_name="gpt-4o-mini", temperature=0, openai_api_key=api_key)
 
-# --- Prompts ---
+# Prompt de Clasificacion
 clasificacion_prompt = PromptTemplate(
     input_variables=["pregunta"],
     template="""
@@ -95,6 +99,7 @@ Devuelve solo una de estas palabras en mayúsculas: CLARA, AMBIGUA o FUERA DE CO
 )
 clasificacion_chain = clasificacion_prompt | llm_clasificador
 
+#Prompt para las respuestas
 qa_prompt = PromptTemplate(
     input_variables=["context", "question"],
     template="""
@@ -119,12 +124,12 @@ qa_chain = RetrievalQA.from_chain_type(
     chain_type_kwargs={"prompt": qa_prompt}
 )
 
-# --- App FastAPI ---
+# FastAPI
 app = FastAPI()
 frontend_path = pathlib.Path(__file__).resolve().parent.parent / "frontend"
 app.mount("/static", StaticFiles(directory=frontend_path), name="static")
 
-# --- Permitir CORS (para conexión con frontend) ---
+# Permitir CORS (para conexión con frontend)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -133,13 +138,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# --- Memoria ---
+# Memoria para el chatbot
 memoria = {"ultima_pregunta": None, "ultima_respuesta": None}
 
-# --- Esquema de datos ---
 class PreguntaRequest(BaseModel):
     pregunta: str
 
+#Lógica del Cahtbot
 @app.post("/preguntar")
 def preguntar(req: PreguntaRequest):
     pregunta = req.pregunta.strip()
