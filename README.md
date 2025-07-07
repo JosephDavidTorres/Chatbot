@@ -7,8 +7,7 @@ Este proyecto implementa un sistema de chatbot para responder preguntas a partir
 Para que el sistema funcione correctamente, es necesario realizar los siguientes pasos previos:
 
 1. **Instalar las dependencias**
-
-El proyecto incluye un archivo `requirements.txt` con todas las librerías necesarias. Para instalarlo, ejecuta el siguiente comando desde la raíz del proyecto:
+Se puede incluir un entorno virtual con el documento requirement.txt, pero en caso de que no se haga, el proyecto incluye un archivo `requirements.txt` con todas las librerías necesarias. Para instalarlo, ejecuta el siguiente comando desde la raíz del proyecto:
 
 ```bash
 pip install -r requirements.txt
