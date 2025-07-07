@@ -3,6 +3,7 @@
 Este proyecto implementa un sistema de chatbot para responder preguntas a partir de documentos académicos. Forma parte de mi Proyecto de Fin de Grado.
 
 ## Requisitos y configuración
+IMPORTANTE - Es posible que haya alguna desactualización de las librerías que se han usado en este proyecto.
 
 Para que el sistema funcione correctamente, es necesario realizar los siguientes pasos previos:
 
